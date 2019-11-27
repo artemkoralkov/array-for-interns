@@ -15,7 +15,7 @@
  *
  * Для задач на array-practice импортируйте написанные функции сюда и проверяйте их работу тут.
  */
-
+console.log('start');
 // import { task1Old, task1New } from './es-features/task1';
 // import { task2Old, task2New } from './es-features/task2';
 // import { task3Old, task3New } from './es-features/task3';
@@ -76,3 +76,4 @@
 // console.log('task10 new', task10New()); // {name: 'Max', age: 12, color: red}
 
 // console.log('=============');
+console.log ("end");
