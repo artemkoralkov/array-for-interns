@@ -1,0 +1,57 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%SYSTEMROOT%\System32\OpenSSH\;C:\Users\Aleksandr\AppData\Local\Microsoft\WindowsApps;;C:\Users\Aleksandr\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Aleksandr\AppData\Roaming\npm;C:\Users\Aleksandr\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  10.16.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: D:\learnjs\learn_array\package.json: Unexpected token , in JSON at position 343
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:304:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "learn_array",
+    "version": "1.0.0",
+    "description": "learning of array",
+    "main": "index.js",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/AliaksandrHolub/array-for-interns.git"
+    },
+    "author": "Aliaksandr Holub",
+    "license": "ISC",
+    "start": "webpack-dev-server --open",
+      "build": "webpack"
+    },
+    "devDependencies": {
+      "eslint": "5.3.0",
+      "eslint-config-airbnb-base": "13.1.0",
+      "eslint-config-prettier": "^4.3.0",
+      "eslint-plugin-import": "^2.14.0",
+      "eslint-plugin-prettier": "^3.1.0",
+      "html-webpack-plugin": "^3.2.0",
+      "prettier": "^1.17.1",
+      "webpack": "^4.32.2",
+      "webpack-cli": "^3.3.2",
+      "webpack-dev-server": "^3.5.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
