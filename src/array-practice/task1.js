@@ -14,3 +14,13 @@
  * console.log(any([0, 0, 1, 0])); -> true
  * console.log(any([0, 0, 0, 0])); -> false
  */
+function any(arr, func) {
+  if (func === undefined) {
+    for (const val in arr) {
+      arr[val] = Boolean(arr[val]);
+    }
+    return arr.includes(true);
+  }
+  return arr.some(func);
+}
+export { any };
