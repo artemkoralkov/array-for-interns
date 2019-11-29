@@ -28,4 +28,4 @@ function createGenerator(arr) {
     },
   };
 }
-export { createGenerator };
+export { createGenerator as default };

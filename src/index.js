@@ -15,16 +15,16 @@
  *
  * Для задач на array-practice импортируйте написанные функции сюда и проверяйте их работу тут.
  */
-import { any } from './array-practice/task1';
-import { arrayDiff } from './array-practice/task2';
-import { forEachRight } from './array-practice/task3';
-import { union } from './array-practice/task4';
-import { createGenerator } from './array-practice/task5';
-import { transformArrayToNumber } from './array-practice/task6';
-import { take } from './array-practice/task7';
-import { without } from './array-practice/task8';
-import { indexOfAll } from './array-practice/task9';
-import { membersOnActiveMeetups } from './array-practice/task10';
+import any from './array-practice/task1';
+import arrayDiff from './array-practice/task2';
+import forEachRight from './array-practice/task3';
+import union from './array-practice/task4';
+import createGenerator from './array-practice/task5';
+import transformArrayToNumber from './array-practice/task6';
+import take from './array-practice/task7';
+import without from './array-practice/task8';
+import indexOfAll from './array-practice/task9';
+import membersOnActiveMeetups from './array-practice/task10';
 
 console.log('start');
 console.log(any([0, 1, 2, 0], x => x >= 2));

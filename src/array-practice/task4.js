@@ -8,13 +8,6 @@
  * console.log(union([5, 1, 3, 3, 4], [1, 3, 4])); -> [5, 1, 3, 4]
  */
 function union(arr1, arr2) {
-  const result = [];
-  arr1 = arr1.concat(arr2);
-  for (const val of arr1) {
-    if (!result.includes(val)) {
-      result.push(val);
-    }
-  }
-  return result;
+  return Array.from(new Set(arr1.concat(arr2)));
 }
-export { union };
+export { union as default };

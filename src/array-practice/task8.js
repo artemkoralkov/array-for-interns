@@ -15,4 +15,4 @@ function without(arr, ...args) {
   const result2 = args.filter(val => !arr.includes(val));
   return result1.concat(result2);
 }
-export { without };
+export { without as default };

@@ -16,11 +16,9 @@
  */
 function any(arr, func) {
   if (func === undefined) {
-    for (const val in arr) {
-      arr[val] = Boolean(arr[val]);
-    }
+    arr = arr.map(val => Boolean(val));
     return arr.includes(true);
   }
   return arr.some(func);
 }
-export { any };
+export { any as default };

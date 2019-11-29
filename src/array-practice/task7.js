@@ -14,4 +14,4 @@
 function take(arr, num) {
   return arr.slice(0, num);
 }
-export { take };
+export { take as default };

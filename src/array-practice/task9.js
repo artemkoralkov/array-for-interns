@@ -11,11 +11,11 @@
  * console.log(indexOfAll([1, 2, 3], 4)); -> []
  */
 function indexOfAll(arr, val) {
-  const newArr = [];
-  while (arr.includes(val)) {
-    newArr.push(arr.indexOf(val));
-    delete arr[arr.indexOf(val)];
-  }
-  return newArr;
+  return arr.reduce((acc, item, index) => {
+    if (item === val) {
+      acc.push(index);
+    }
+    return acc;
+  }, []);
 }
-export {indexOfAll};
+export { indexOfAll as default };

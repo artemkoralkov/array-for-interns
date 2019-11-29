@@ -23,4 +23,4 @@
 function transformArrayToNumber(arr, func, start = 0) {
   return arr.reduce(func, start);
 }
-export { transformArrayToNumber };
+export { transformArrayToNumber as default };

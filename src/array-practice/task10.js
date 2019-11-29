@@ -17,4 +17,4 @@ function membersOnActiveMeetups(arr) {
     return accum;
   }, 0);
 }
-export { membersOnActiveMeetups };
+export { membersOnActiveMeetups as default };
