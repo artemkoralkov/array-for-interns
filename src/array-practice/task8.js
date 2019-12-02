@@ -11,8 +11,6 @@
  * console.log(without([2, 1, 10, 20], 1, 2)) -> [10, 20]
  */
 function without(arr, ...args) {
-  const result1 = arr.filter(val => !args.includes(val));
-  const result2 = args.filter(val => !arr.includes(val));
-  return result1.concat(result2);
+  return arr.filter(it => args.indexOf(it) < 0);
 }
 export { without as default };
