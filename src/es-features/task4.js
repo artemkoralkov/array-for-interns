@@ -7,27 +7,38 @@
  */
 
 export function task4Old() {
-    var x = 10;
-    var y = 20;
-  
-    var obj = {
-      x: x,
-      y: y,
-      bar: function bar() {
-        return this.x + this.y;
-      },
-    };
-  
-    function foo() {
-      return 'test';
-    }
-  
-    obj['baz' + foo()] = 'new field';
-  
-    return obj;
+  var x = 10;
+  var y = 20;
+  var obj = {
+    x: x,
+    y: y,
+    bar: function bar() {
+      return this.x + this.y;
+    },
+  };
+  function foo() {
+    return 'test';
   }
-  
-  // Напишите реализацию функции task4Old на ES6+ ниже этого комментария.
-  // При желании, можете использовать стрелочную функцию, вместо обычной
-  
-  export function task4New() {}
+  obj['baz' + foo()] = 'new field';
+
+  return obj;
+}
+
+// Напишите реализацию функции task4Old на ES6+ ниже этого комментария.
+// При желании, можете использовать стрелочную функцию, вместо обычной
+
+export function task4New() {
+  const x = 10;
+  const y = 20;
+  const obj = {
+    x,
+    y,
+    bar: function() {
+      return this.x + this.y;
+    },
+  };
+  const foo = () => 'test';
+  obj[`baz${foo()}`] = 'new field';
+
+  return obj;
+}

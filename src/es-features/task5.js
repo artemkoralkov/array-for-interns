@@ -6,14 +6,19 @@
  */
 
 export function task5Old(array, obj) {
-    var name = array[0];
-    var val = array[1];
-    var objName = obj.name;
-    var objValue = obj.val;
-    return [name, val, objName, objValue];
-  }
-  
-  // Напишите реализацию функции task5Old на ES6+ ниже этого комментария.
-  // При желании, можете использовать стрелочную функцию, вместо обычной
-  
-  export function task5New() {}
+  var name = array[0];
+  var val = array[1];
+  var objName = obj.name;
+  var objValue = obj.val;
+  return [name, val, objName, objValue];
+}
+
+// Напишите реализацию функции task5Old на ES6+ ниже этого комментария.
+// При желании, можете использовать стрелочную функцию, вместо обычной
+
+export function task5New(array, obj) {
+  const [name, val] = array;
+  const { objName, objValue } = obj;
+  return [name, val, objName, objValue];
+}
+// console.log(task5New(['test', 42], { objName: 'foo', objValue: 7 }));
