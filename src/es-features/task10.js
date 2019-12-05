@@ -39,7 +39,7 @@ Object.defineProperty(B.prototype, 'color', {
   },
 });
 
-/* export default function task10Old() {
+export function task10Old() {
   var b = new B('Max', 12);
   console.log(b.getName('Best')); // Max Best
   console.log(b.getAge()); // 12
@@ -47,7 +47,7 @@ Object.defineProperty(B.prototype, 'color', {
   b.color = 'red';
   console.log(b.color); // red
   return b;
-} */
+}
 
 // Перепишите функции-конструкторы A и B ниже этого комментария.
 // Названия классов должны быть NewA и NewB
@@ -70,7 +70,7 @@ class NewB extends NewA {
   }
 
   getName(text) {
-    return `${this.getName()} ${text}` ;
+    return `${super.getName()} ${text}`;
   }
 
   getAge() {
@@ -81,13 +81,6 @@ class NewB extends NewA {
     return new NewB('test', 0);
   }
 }
-
-NewB.prototype = Object.create(NewA.prototype);
-NewB.prototype.constructor = NewB;
-
-
-
-
 Object.defineProperty(NewB.prototype, 'color', {
   get: function() {
     return this._color;
@@ -96,13 +89,13 @@ Object.defineProperty(NewB.prototype, 'color', {
     this._color = color;
   },
 });
-/* export */ function task10New() {
-  let b = new B('Max', 12);
+export function task10New() {
+  const b = new NewB('Max', 12);
   console.log(b.getName('Best')); // Max Best
   console.log(b.getAge()); // 12
-  console.log(B.defaultUser()); // {name: 'test', age: 0}
+  console.log(NewB.defaultUser()); // {name: 'test', age: 0}
   b.color = 'red';
   console.log(b.color); // red
   return b;
 }
-task10New();
+// task10New();

@@ -15,7 +15,7 @@
  *
  * Для задач на array-practice импортируйте написанные функции сюда и проверяйте их работу тут.
  */
-/* import any from './array-practice/task1';
+import any from './array-practice/task1';
 import arrayDiff from './array-practice/task2';
 import forEachRight from './array-practice/task3';
 import union from './array-practice/task4';
@@ -23,8 +23,8 @@ import createGenerator from './array-practice/task5';
 import transformArrayToNumber from './array-practice/task6';
 import take from './array-practice/task7';
 import without from './array-practice/task8';
-import indexOfAll from './array-practice/task9'; 
-import membersOnActiveMeetups from './array-practice/task10'; */
+import indexOfAll from './array-practice/task9';
+import membersOnActiveMeetups from './array-practice/task10';
 import { task1Old, task1New } from './es-features/task1';
 import { task2Old, task2New } from './es-features/task2';
 import { task3Old, task3New } from './es-features/task3';
@@ -37,7 +37,7 @@ import { task9Old, task9New } from './es-features/task9';
 import { task10Old, task10New } from './es-features/task10';
 
 console.log('start');
-/* console.log(any([0, 1, 2, 0], x => x >= 2));
+console.log(any([0, 1, 2, 0], x => x >= 2));
 console.log(any([0, 0, 1, 0]));
 console.log(any([0, 0, 0, 0]));
 console.log(arrayDiff([1, 2, 3], [1, 2, 4]));
@@ -68,7 +68,7 @@ const meetups = [
   { name: 'Node', isActive: false, members: 600 },
   { name: 'React', isActive: true, members: 500 },
 ];
-console.log(membersOnActiveMeetups(meetups)); */
+console.log(membersOnActiveMeetups(meetups));
 console.log('task1 old', task1Old(10) === 500); // true
 console.log('task1 new', task1New(10) === 500); // true
 
@@ -118,4 +118,4 @@ console.log('task10 old', task10Old()); // {name: 'Max', age: 12, color: red}
 console.log('task10 new', task10New()); // {name: 'Max', age: 12, color: red}
 
 console.log('=============');
-console.log ("end");
+console.log('end');

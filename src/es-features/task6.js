@@ -5,7 +5,7 @@
  * console.log(task6Old()); -> ['Max', 100, 'Admin', false, '1']
  */
 
-/* export function task6Old() {
+export function task6Old() {
   function userModule() {
     return {
       name: 'Max',
@@ -23,12 +23,12 @@
   var firstCaseId = tmp.cases[0].id;
 
   return [name, value, role, isActive, firstCaseId];
-} */
+}
 
 // Напишите реализацию функции task6Old на ES6+ ниже этого комментария.
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
-/* export */ function task6New() {
+export function task6New() {
   function userModule() {
     return {
       name: 'Max',
@@ -41,11 +41,9 @@
   const {
     name,
     value,
-    role: { name: adminName },
-    isActive === undefined? false,
+    role: { name: role },
+    isActive = false,
     cases: [{ id: firstCaseId }],
   } = userModule();
-  return [name, value, adminName, isActive, firstCaseId];
+  return [name, value, role, isActive, firstCaseId];
 }
-
-console.log(task6New());

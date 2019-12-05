@@ -5,22 +5,20 @@
  * console.log(task9Old()); -> [true, 1]
  */
 
-/* export function task9Old() {
+export function task9Old() {
   var result = 'test'.indexOf('est') !== -1;
   var findResult = [22, 1, 90, 70].filter(function(x) {
     return x < 3;
   })[0];
 
   return [result, findResult];
-} */
+}
 
 // Напишите реализацию функции task9Old на ES6+ ниже этого комментария.
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
-/* export */ function task9New() {
-  var result = 'test'.includes('est');
-  var findResult = [22, 1, 90, 70].filter(val => val < 3)[0];
-
-  return [result, findResult];
+export function task9New() {
+  const [findResult] = [22, 1, 90, 70].filter(val => val < 3);
+  return ['test'.includes('est'), findResult];
 }
-console.log(task9New());
+/* console.log(task9New()); */

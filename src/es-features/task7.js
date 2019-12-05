@@ -7,7 +7,7 @@
  * console.log(task7Old()); -> {test: 0, foo: 1, bar: 2}
  */
 
-/* export function task7Old() {
+export function task7Old() {
   var obj = { test: 0 };
   var obj2 = { foo: 1, bar: 2 };
 
@@ -17,19 +17,16 @@
 
   return obj; // obj = {test: 0, foo: 1, bar: 2}
 }
- */
+
 // Напишите реализацию функции task7Old на ES6+ ниже этого комментария.
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
-/* export */ function task7New() {
+export function task7New() {
   const obj = { test: 0 };
   const obj2 = { foo: 1, bar: 2 };
-
-  Object.keys(obj2).forEach(function(k) {
-    obj[k] = obj2[k];
-  });
-
-
+  for (let key of Object.keys(obj2)) {
+    obj[key] = obj2[key];
+}
   return obj;
 }
-console.log(task7New());
+// console.log(task7New());
