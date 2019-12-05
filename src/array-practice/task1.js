@@ -1,23 +1,24 @@
 /**
  * Если не определены b и c, инициализировать их дефолтными значениями 70 и 420
  *
- * Пример вызова
- * console.log(task1Old(10) === 500); -> true
+ * Первый аргумент - массив, второй - колбек-функция, которая применяется на массив
+ * Колбек-функция применяется на каждый элемент массива и проверяет условие
+ * Если хотя бы один раз колбек-функция вернула true, то any возвращает true
+ * Иначе - false
+ *
+ * Если колбек-функция не была передана, то из any возвращаем true,
+ * если в массиве есть хотя бы один элемент, который дает true,
+ * если все значения в массиве дают false, то возвращаем false
+ *
+ * console.log(any([0, 1, 2, 0], x => x >= 2)); -> true
+ * console.log(any([0, 0, 1, 0])); -> true
+ * console.log(any([0, 0, 0, 0])); -> false
  */
-
-export function task1Old(a, b, c) {
-    if (b === undefined) {
-      b = 70;
-    }
-  
-    if (c === undefined) {
-      c = 420;
-    }
-  
-    return a + b + c;
+function any(arr, func) {
+  if (func === undefined) {
+    arr = arr.map(val => Boolean(val));
+    return arr.includes(true);
   }
-  
-  // Напишите реализацию функции task1Old на ES6+ ниже этого комментария.
-  // При желании, можете использовать стрелочную функцию, вместо обычной
-  
-  export function task1New() {}
+  return arr.some(func);
+}
+export { any as default };

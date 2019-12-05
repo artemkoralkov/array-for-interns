@@ -15,3 +15,7 @@
  * console.log(arrayDiff([1, 2, 3], [1, 2, 4])); -> [3, 4]
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
+function arrayDiff(arr1, arr2) {
+  return arr1.filter(val => !arr2.includes(val)).concat(arr2.filter(val => !arr1.includes(val)));
+}
+export { arrayDiff as default };
