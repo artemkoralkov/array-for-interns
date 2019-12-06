@@ -80,15 +80,16 @@ class NewB extends NewA {
   static defaultUser() {
     return new NewB('test', 0);
   }
-}
-Object.defineProperty(NewB.prototype, 'color', {
-  get: function() {
+
+  getColor() {
     return this._color;
-  },
-  set: function(color) {
+  }
+
+  setColort(color) {
     this._color = color;
-  },
-});
+  }
+}
+
 export function task10New() {
   const b = new NewB('Max', 12);
   console.log(b.getName('Best')); // Max Best
@@ -98,4 +99,3 @@ export function task10New() {
   console.log(b.color); // red
   return b;
 }
-// task10New();

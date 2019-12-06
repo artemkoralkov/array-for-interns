@@ -24,9 +24,9 @@ export function task7Old() {
 export function task7New() {
   const obj = { test: 0 };
   const obj2 = { foo: 1, bar: 2 };
-  for (let key of Object.keys(obj2)) {
+  for (const key of Object.keys(obj2)) {
     obj[key] = obj2[key];
-}
+  }
   return obj;
 }
 // console.log(task7New());
